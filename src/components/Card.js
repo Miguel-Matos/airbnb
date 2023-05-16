@@ -2,7 +2,6 @@ import React from "react";
 import star from '../img/Red_star.png'
 
 
-
 export default function Card(props) {
   return (
     <div className="card">

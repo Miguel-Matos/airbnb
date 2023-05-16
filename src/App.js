@@ -2,20 +2,26 @@ import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Card from './components/Card';
+import data from './data';
 
 function App() {
+  const elem = data.map(info => {
+    return <Card 
+      title={info.title}
+      // description={info.description}
+      price={info.price}
+      image={info.coverImg}
+      stars={info.stats.rating}
+      reviews={info.stats.reviewCount}
+      country={info.location}
+    />
+  })
+
   return (
     <div className="App">
       <Header />
       <Hero />
-      <Card 
-        title="Life Lessons with Katie Zaferes"
-        stars={5.0}
-        reviews={6}
-        country="USA"
-        price={136}
-        image="img1.png"
-      />
+      {elem}
     </div>
   );
 }

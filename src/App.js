@@ -8,7 +8,14 @@ function App() {
     <div className="App">
       <Header />
       <Hero />
-      <Card />
+      <Card 
+        title="Life Lessons with Katie Zaferes"
+        stars={5.0}
+        reviews={6}
+        country="USA"
+        price={136}
+        image="img1.png"
+      />
     </div>
   );
 }
